@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-size: cover;
+    animation: slidein 100s infinite alternate forwards;
+}
+
+@keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    font-family: "poppins", sans-serif;
+    width: min(95vw, 31.25em);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.875em;
+}
+
+.container {
+    padding: 3em 2.5em;
+    background: rgb(231, 236, 228);
+    box-shadow: 0 1em 2em rgb(0, 0, 0, 0.3);
+    border-radius: 2em;
+}
+
+#wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 1em;
+}
+
+#wrapper-input {
+    width: 100%;
+    background-color: transparent;
+    color: #111111;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: 2px solid #92489cb2;
+    padding: 1em 1.5em;
+}
+
+#wrapper input:focus {
+    outline: none;
+    border: none; /* Set border to none to remove the outline completely */
+}
+#wrapper input::placeholder {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Corrected font-family property */
+    font-size: 20px;
+    color: black;
+}
+#wrapper button {
+    position: relative;
+    border-radius: 0.5em;
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #b735df;
+    border: none;
+    outline: none;
+    color: #d1d3d4;
+    cursor: pointer;
+    padding: 0.5em 1.0em;
+}
+
+#error {
+    text-align: center;
+    background-color: #ffff;
+    color: rgb(201, 48, 10);
+    margin-top: 1.5em;
+    padding: 1em 0;
+    border-radius: 0.8em;
+    display: none;
+}
+
+#tasks {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+#pending-Tasks {
+    font-size: 1.2em; /* Adjust the font size as needed */
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(75, 75, 250, 0.3);
+    border-radius: 3px;
+}
+
+.center h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+}
+#tasks{
+    margin-top: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+    position: relative;
+    padding: 1em 0.5em;
+}
+.task {
+    background-color: #88eee5;
+    padding: 0.8em 1em;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr;
+    gap:1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.05);
+    align-items: center;
+    cursor: pointer;
+}
+.task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #9d13ec;
+
+}
+.task input[type="checkbox"]:before{
+  content:"";
+  position:absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left:50%
+}
+.task input[type="checkbox"]:checked{
+    background-color: #bcd647;
+    border-color: rgb(55, 0, 255);
+
+}
+.task input[type="checkbox"]:checked:before{
+    content:"\f00c";
+    position:absolute;
+    color: #188866;
+    font-size: 0.8em;
+    font-family: "font Awesome 5 Free";
+    font-weight: 900;
+  }
+  .task span{
+    font: 0.9em;
+    font-weight: 400;
+    word-break: break-all;
+
+}
+.task button{
+    color: #ffff;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.edit{
+
+    background-color: rgb(60, 77, 175);
+}
+.delete{
+    background-color: #f0190a;
+}
+#pending-tasks span{
+  color: #e737de;
+}
+.completed{
+    text-decoration: line-through;
+    color: #3a0cdf;
+}
